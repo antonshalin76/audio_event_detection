@@ -100,6 +100,7 @@ P.S. Работа выполнена по плану.
 - <a href="https://colab.research.google.com/drive/1KoObbZqzG2zsbhrAzazxc5fO-UtfnnoQ?usp=sharing">Решение по проекту в Google Colab</a>
 
 - Для возможности запуска проекта на других машинах собрал код, входные файлы, русифицированные метки модели, окружение и зависисмости в Docker контейнер. Docker-образ можно взять в моем репозитории:
+
 docker pull antonshalin/audio_event_detection:latest
 
 Для простого вывода в консоль результатов обнаружения звуковых событий сделайте чистый запуск:
