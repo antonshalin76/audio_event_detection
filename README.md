@@ -97,7 +97,20 @@ P.S. Работа выполнена по плану.
 
 ### Итого сделал
 
-<li><a href="https://colab.research.google.com/drive/1KoObbZqzG2zsbhrAzazxc5fO-UtfnnoQ?usp=sharing">Решение по проекту в Google Colab</a></li>
+- <a href="https://colab.research.google.com/drive/1KoObbZqzG2zsbhrAzazxc5fO-UtfnnoQ?usp=sharing">Решение по проекту в Google Colab</a>
+
+- Для возможности запуска проекта на других машинах собрал код, входные файлы, русифицированные метки модели, окружение и зависисмости в Docker контейнер. Docker-образ можно взять в моем репозитории:
+docker pull antonshalin/audio_event_detection:latest
+
+Для простого вывода в консоль результатов обнаружения звуковых событий сделайте чистый запуск:
+
+docker run antonshalin/audio_event_detection
+
+Если вы хотите сохранить результаты работы приложения на хост-машине, используйте Docker volumes для монтирования соответствующих каталогов:
+
+docker run -v /my/host/directory:/usr/src/app/data antonshalin/audio_event_detection
+
+, здесь /my/host/directory - путь к каталогу на хост-машине, а /usr/src/app/data - путь внутри контейнера, куда этот каталог будет примонтирован.
  
 ## Контактная информация
 - Email: anton.shalin@gmail.com
